@@ -1,6 +1,7 @@
 import "./ApartmentGrid.scss";
 import ApartmentCard from "./ApartmentCard.jsx";
 import { useLoaderData } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
 export async function loader() {
   const response = await fetch("db.json");
@@ -10,10 +11,17 @@ export async function loader() {
 
 function ApartmentGrid() {
   const {apartments} = useLoaderData();
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    if (apartments.length > 0) {
+      setLoading(false);
+    }
+  }, [apartments]);
 
-  if (apartments.length === 0) {
-    return <div>Loading...</div>;
+  if (loading) {
+    console.log("aloloooo");
+    return <h1>Loading...</h1>;
   }
 
   return (

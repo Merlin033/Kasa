@@ -4,4 +4,7 @@
   @media screen and (width <= 768px) {
     padding: 1rem;
   }
+  @media screen and (width <= 400px) {
+    padding: 0.5rem;
+  }
 }
