@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function ApartmentCard(props) {
   return (
     <Link
-      to="/flat"
+      to="/apartment"
       state={{
         apartmentId: props.id
       }}

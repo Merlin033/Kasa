@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 import ApartmentPage from "../pages/ApartmentPage";
 import About from "../pages/About";
 import { ErrorPageNotFound } from "../pages/ErrorPageNotFound";
+import {loader as gridLoader} from "../components/ApartmentGrid";
 
 const HeaderFooterLayout = () => {
   return (
@@ -23,14 +24,15 @@ const HeaderFooterLayout = () => {
 export const router = createBrowserRouter([
   {
     element: <HeaderFooterLayout />,
-    errorElement: <ErrorPageNotFound />,
+    errorElement: <ErrorPageNotFound />, 
     children: [
       {
         path: "/",
-        element: <HomePage />
+        element: <HomePage />,
+        loader: gridLoader
       },
       {
-        path: "/flat/:id",
+        path: "/apartment/:id",
         element: <ApartmentPage />
       },
       {
