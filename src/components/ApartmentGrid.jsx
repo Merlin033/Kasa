@@ -20,7 +20,6 @@ function ApartmentGrid() {
   }, [apartments]);
 
   if (loading) {
-    console.log("aloloooo");
     return <h1>Loading...</h1>;
   }
 
