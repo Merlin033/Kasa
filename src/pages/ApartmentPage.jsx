@@ -17,7 +17,7 @@ export function useApartment() {
         setApart(apart);
       })
       .catch(console.error);
-  }, []);
+  }, [location.state.apartmentId]);
   return apart;
 }
 
