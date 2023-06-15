@@ -53,6 +53,9 @@
     .banner_about{
       height: 223px;
     }
+    @media (max-width: 375px) {
+      height: 255px;
+    }
   }
 }
 #image__container--about{
