@@ -38,4 +38,3 @@ function ApartmentGrid() {
 }
 
 export default ApartmentGrid;
-
