@@ -18,6 +18,10 @@
     i {
       font-size: 2rem;
       cursor: pointer;
+      transition: 0.5s ease;
+    }
+    .chevron-down{
+      transform: rotate(-180deg);
     }
   }
   .description__content {
